@@ -10,9 +10,8 @@ else:
 	if len(pw.enemy_planets()) >= 1:
 		dest = pw.enemy_planets()[0]
 
-	source = pw.my_planets()[0]
+source = pw.my_planets()[0]
 	
-	num_ships = source.num_ships() / 2
-	pw.debug('Num Ships: ' + str(num_ships))
-
-	pw.issue_order(source, dest, num_ships)
+num_ships = source.num_ships() / 2
+pw.debug('Num Ships: ' + str(num_ships)
+pw.issue_order(source, dest, num_ships)
