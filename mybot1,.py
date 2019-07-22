@@ -1,14 +1,14 @@
 def do_turn(pw):
 if len(pw.my_fleets()) >= 1:
-  return
+	return
 if len(pw.my_planets()) == 0:
-		return
+	return
 
 if len(pw.neutral_planets()) >= 1:
-		dest = pw.neutral_planets()[0]
-	else:
-    if len(pw.enemy_planets()) >= 1:
-      dest = pw.enemy_planets()[0]
+	dest = pw.neutral_planets()[0]
+else:
+	if len(pw.enemy_planets()) >= 1:
+		dest = pw.enemy_planets()[0]
 
 	source = pw.my_planets()[0]
 	
