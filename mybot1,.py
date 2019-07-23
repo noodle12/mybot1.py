@@ -64,12 +64,8 @@ def do_turn(pw):
             pl3 = planet.planet_id()
     for planet in pw.my_planets():
         if(planet.num_ships() > 100) and len(pw.neutral_planets()) > 0:
-            pw.issue_order(planet, pw.neutral_planets()[0],  planet.num_ships()*0.2)
-            pw.issue_order(planet, pw.neutral_planets()[0],  planet.num_ships()*0.2)
-            pw.issue_order(planet, pw.neutral_planets()[0],  planet.num_ships()*0.2)
-    if len(pw.neutral_planets()) == 0:
+            pw.issue_order(planet, pw.neutral_planets()[0],  planet.num_ships()*0.7)
+    if len(pw.neutral_planets()) == 0 and len(pw.enemy_planets()) != 0:
         for planet in pw.my_planets():
-            pw.issue_order(planet, pw.enemy_planets()[0],  planet.num_ships()*0.2)
-            pw.issue_order(planet, pw.enemy_planets()[0],  planet.num_ships()*0.2)
-            pw.issue_order(planet, pw.enemy_planets()[0],  planet.num_ships()*0.2)
+            pw.issue_order(planet, pw.enemy_planets()[0],  planet.num_ships()*0.7)
     return
